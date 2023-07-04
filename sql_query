@@ -1,1 +1,39 @@
+                                                  --Read Data--
 
+select * from car_dekho
+
+                                    --total records - to get count of total cars--
+
+select count(*) from car_dekho
+
+                                        --How many cars are availible in 2023 --
+
+select count(*) from car_dekho
+where year = 2023
+
+                                      -- How many cars availible in 2020,2021,2022 --
+
+select count (*) from car_dekho
+where year = 2020 #74
+
+select count (*) from car_dekho
+where year = 2021 #7
+
+select count (*) from car_dekho
+where year = 2022 #7
+
+                                                  --group by--
+
+select  year,count(*) from car_dekho where year in (2020,2021,2022)
+group by year
+
+                                              -- print all the cars by year --
+
+select year,count(*) from car_dekho
+group by year
+order by year desc
+
+                                    -- clint asked how many diesel cars are availible in 2020 --
+
+select count(*) from car_dekho 
+where year = 2020 and fuel = 'Diesel'
