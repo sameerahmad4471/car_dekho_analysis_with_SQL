@@ -37,3 +37,39 @@ order by year desc
 
 select count(*) from car_dekho 
 where year = 2020 and fuel = 'Diesel'
+
+                                    -- clint asked how many petrol cars are availible in 2020 --
+
+select count(*) from car_dekho 
+where year = 2020 and fuel = 'Petrol'
+
+                                            -- all type of cars availible in all years --
+
+                                                       --Diesel--
+select year , count(*) from car_dekho
+where fuel ='Diesel' group by year order by year desc
+
+                                                        --Petrol--
+
+select year , count(*) from car_dekho
+where fuel ='Petrol' group by year order by year desc
+
+                                                         --CNG--
+ 
+select year , count(*) from car_dekho
+where fuel ='CNG' group by year order by year desc
+
+                                            --which year had more than 100 cars --
+
+select year,count(*) from car_dekho
+group by year having count(*)> 100
+
+                                            --list of all data between 2015 to 2023 --
+
+select * from car_dekho
+where year between 2015 and 2023
+
+
+
+
+
